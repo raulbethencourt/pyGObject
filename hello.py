@@ -1,8 +1,9 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!/home/linuxbrew/.linuxbrew/bin/python3
 import gi
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
+
 
 class MyWindow(Gtk.Window):
     def __init__(self):
@@ -14,6 +15,7 @@ class MyWindow(Gtk.Window):
 
     def on_button_clicked(self, widget):
         print("Hello, World!")
+
 
 win = MyWindow()
 win.connect("destroy", Gtk.main_quit)
